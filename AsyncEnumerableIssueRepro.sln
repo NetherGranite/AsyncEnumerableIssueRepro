@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1\BlazorApp1.csproj", "{A41FE191-057C-48E1-BB18-7735FFD76FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Client", "BlazorApp1\BlazorApp1.Client\BlazorApp1.Client.csproj", "{018570B4-7BE6-49A6-8648-03EF5D2596BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41FE191-057C-48E1-BB18-7735FFD76FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41FE191-057C-48E1-BB18-7735FFD76FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41FE191-057C-48E1-BB18-7735FFD76FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41FE191-057C-48E1-BB18-7735FFD76FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018570B4-7BE6-49A6-8648-03EF5D2596BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018570B4-7BE6-49A6-8648-03EF5D2596BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018570B4-7BE6-49A6-8648-03EF5D2596BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018570B4-7BE6-49A6-8648-03EF5D2596BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
