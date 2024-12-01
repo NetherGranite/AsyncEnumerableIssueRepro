@@ -1,7 +1,36 @@
 ﻿@page "/"
 
+@inject HttpClient HttpClient
+
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<button @onclick="@LoadItemsAsync">Load Items</button>
+
+@foreach (var item in _items)
+{
+    <div>@item</div>
+}
+
+@code {
+    private readonly ICollection<string> _items = [];
+
+    private async Task LoadItemsAsync()
+    {
+        _items.Clear();
+        
+        var itemStream = HttpClient.GetFromJsonAsAsyncEnumerable<string>("/api/items");
+
+        await foreach (var item in itemStream)
+        {
+            Console.WriteLine($"Loaded '{item}'!");
+            
+            _items.Add(item!);
+            
+            StateHasChanged();
+        }
+    }
+}

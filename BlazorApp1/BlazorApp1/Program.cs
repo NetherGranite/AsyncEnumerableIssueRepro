@@ -32,4 +32,20 @@ app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(BlazorApp1.Client._Imports).Assembly);
 
+app.MapGet("/api/items", () =>
+{
+    async IAsyncEnumerable<string> GetItemsAsync()
+    {
+        yield return "first";
+        await Task.Delay(2000);
+        yield return "second";
+        await Task.Delay(2000);
+        yield return "third";
+        await Task.Delay(2000);
+        yield return "fourth";
+    }
+    
+    return GetItemsAsync();
+});
+
 app.Run();
